@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis App - Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_3.css') }}">
+</head>
+<body>
+     <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+
+  <div class="container">
+    
+    <div class="card">
+       <div class="face face1">
+         <div class="content">
+            <h2 style="color: rgb(255, 255, 255);">REVIEW</h2>
+            <p style="color: rgb(255, 255, 255);">{{ review }}</p>
+            <h2 style="color: rgb(255, 255, 255);">RESULT</h2>
+            <p style="color: rgb(255, 255, 255);">SENTIMENT : {{ outcome }}</p>
+            <p style="color: rgb(255, 255, 255);">PROBABILITY : {{ probability }}</p>
+         </div>
+       </div>
+       <div class="face face2">
+         <div class="content">
+        <center>
+           <p> THE SENTIMENT ANALYSIS MODEL CREATED BY US HAS ACHIEVED AN ACCURACY : 92.80376 %</p>
+           <a href="{{ url_for('index') }}" class="button">BACK TO HOME</a>
+        </center>
+        </div>
+       </div>
+    </div>
+    
+  </div>
+  
+</body>
+</html>

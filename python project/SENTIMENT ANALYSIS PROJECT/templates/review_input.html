@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis App - Review Input</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_2.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ENTER YOUR REVIEW</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            
+            <textarea name="review" id="review" rows="4" cols="50" required></textarea><br><br>
+            <input type="submit" value="SUBMIT">
+        </form>
+    </div>
+</body>
+</html>
+

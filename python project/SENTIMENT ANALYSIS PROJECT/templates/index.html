@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENTIMENT ANALYSIS APP</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_1.css') }}">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="box">
+            <div class="image_show">
+                <a href="https://www.compsoft.com/"><img src="data:image/png;base64,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" alt="" width="400px" height="400px"></a>
+            </div>
+
+            <div class="image_show_1">
+                <div class="image_show_11">
+                    <i class="fas fa-play"></i>
+                    
+                </div>
+            </div>
+
+            <div class="product__disc">
+                <div class="product__disc--content">
+                    <div class="disc__content--about">
+                        <h1>SENTIMENT ANALYSIS MODEL</h1>
+                        <span></span>
+                        <p>Our mission is to develop state-of-the-art sentiment analysis models leveraging advanced techniques in deep learning, powered by TensorFlow and Keras. </p>
+                        <br>
+                        <h3>TEAM : INEPT SENTINELS</h3>
+                        <p>L VALLABHA RAO-1JB21CS075</p>
+                        <p>KUSUMITHA Y.H-1JB21CS074</p>
+                        <p>PAVAN REDDY R-1JB21CS104</p>
+                        <p>NISCHTH H.U-1JB21CS098</p>
+
+                    </div>
+
+                    <div class="product__view--more">
+                        
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="product_buttons">
+                <a href="{{ url_for('review_input') }}" class="btn check">CONTINUE TO SENTIMENT ANALYSIS</a>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
